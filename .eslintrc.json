@@ -1,16 +1,15 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": [
-    "@nx",
-    "@typescript-eslint",
-    "import"
-  ],
+  "plugins": ["@nx", "@typescript-eslint", "import"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "airbnb-typescript/base"
   ],
+  "rules": {
+    "react/jsx-filename-extension": ["off"]
+  },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],

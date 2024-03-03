@@ -1,5 +1,8 @@
 import React from 'react';
 import './global.css';
+import { ToastContainer } from 'react-toastify';
+import ReactQueryProvider from '../shared/Providers/ReactQueryProvider';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
   title: 'Welcome to frontend',
@@ -8,8 +11,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <ReactQueryProvider>
+      <html lang="en">
+        <body>
+          {children}
+          <ToastContainer />
+        </body>
+      </html>
+    </ReactQueryProvider>
   );
 }
