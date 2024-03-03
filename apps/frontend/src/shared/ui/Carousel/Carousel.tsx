@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Button } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import {
   ArrowBackIosOutlined,
   ArrowForwardIosOutlined,
 } from '@mui/icons-material';
-import { Ads } from '../../types/types';
 import Image from 'next/image';
+import { Ads } from '../../types/types';
 
 interface Props {
   images: Ads['images'];
@@ -26,9 +26,9 @@ function SimpleImageSlider({ images }: Props) {
   };
 
   return (
-    <div style={{ maxWidth: '600px', position: 'relative', height: '30%' }}>
+    <Box width="30vw" height="30%" position="relative">
       <Image
-        style={{ objectFit: 'cover', width: '100%' }}
+        style={{ objectFit: 'cover', width: '100%', height: '100%' }}
         src={images[activeStep].image}
         alt={`Slide ${activeStep} image`}
         width={600}
@@ -38,7 +38,13 @@ function SimpleImageSlider({ images }: Props) {
         size="small"
         onClick={handleBack}
         disabled={maxSteps === 1}
-        style={{ position: 'absolute', left: 0, top: '50%', zIndex: 1 }}
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: '50%',
+          zIndex: 1,
+          transform: 'translateY(-50%)',
+        }}
       >
         <ArrowBackIosOutlined />
       </Button>
@@ -46,11 +52,17 @@ function SimpleImageSlider({ images }: Props) {
         size="small"
         onClick={handleNext}
         disabled={maxSteps === 1}
-        style={{ position: 'absolute', right: 0, top: '50%', zIndex: 1 }}
+        style={{
+          position: 'absolute',
+          right: 0,
+          top: '50%',
+          zIndex: 1,
+          transform: 'translateY(-50%)',
+        }}
       >
         <ArrowForwardIosOutlined />
       </Button>
-    </div>
+    </Box>
   );
 }
 

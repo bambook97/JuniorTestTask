@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Button, Box } from '@mui/material';
-import AddsCardsList from '../widgets/AdsCardsList/AddsCardsList';
+import AddsCardsList from '../widgets/AdsCardsList/AdsCardsList';
 
 const AdsPage = () => {
   const [isEnabled, setIsEnabled] = useState(false);

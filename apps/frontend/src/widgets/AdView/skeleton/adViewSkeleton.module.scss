@@ -1,13 +1,14 @@
 .wrapper {
-  padding: 40px;
   height: 100vh;
+  padding: 0 40px 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.textBlock {
-  width: 100%;
+.image {
+  width: 35vw;
+  height: 30%;
 }
 .productInfo {
   display: flex;
@@ -15,7 +16,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-}
-.description {
-  padding-top: 40px;
+  &:nth-child(2) {
+    padding-bottom: 40px;
+  }
 }

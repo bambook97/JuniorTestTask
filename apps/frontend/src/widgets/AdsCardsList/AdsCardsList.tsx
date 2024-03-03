@@ -6,10 +6,10 @@ import FiltersDialog from '../../features/AdsFilter/AdsFilter';
 import LikeButton from '../../features/AdsCard/LikeButton/LikeButton';
 import style from './adsCardsList.module.scss';
 
-interface Props {
+interface AdsCardsListProps {
   isEnabled: boolean;
 }
-const AddsCardsList = ({ isEnabled }: Props) => {
+const AdsCardsList = ({ isEnabled }: AdsCardsListProps) => {
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [filtersParams, setFiltersParams] = useState('');
 
@@ -23,6 +23,7 @@ const AddsCardsList = ({ isEnabled }: Props) => {
   const handleApplyFilters = (filters: string) => {
     setFiltersParams(filters);
   };
+  if (!data) return null;
 
   return (
     <div>
@@ -54,4 +55,4 @@ const AddsCardsList = ({ isEnabled }: Props) => {
   );
 };
 
-export default AddsCardsList;
+export default AdsCardsList;

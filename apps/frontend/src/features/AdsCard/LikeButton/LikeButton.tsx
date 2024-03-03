@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
+import { FavoriteBorder, FavoriteRounded } from '@mui/icons-material';
 import style from './likeButton.module.scss';
 
-interface Props {
+interface LikeButtonProps {
   id: string;
 }
 
-const LikeButton = ({ id }: Props) => {
+const LikeButton = ({ id }: LikeButtonProps) => {
   const [liked, setLiked] = useState(false);
   const handleLike = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -20,8 +21,8 @@ const LikeButton = ({ id }: Props) => {
   }, [id]);
 
   return (
-    <Button className={liked ? style.liked : style.normal} onClick={handleLike}>
-      Like
+    <Button className={style.liked} onClick={handleLike}>
+      {liked ? <FavoriteRounded /> : <FavoriteBorder />}
     </Button>
   );
 };
