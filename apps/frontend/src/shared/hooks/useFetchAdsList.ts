@@ -12,6 +12,7 @@ interface Props {
 const useFetchAdsList = ({ searchValue = '', isEnabled }: Props) => {
   const fetchAds = async (): Promise<Ads[]> => {
     const { data } = await axios.get(
+      // URL вынес бы в env, но по условиям задачи нельзя ничего ковырять кроме папки фронта
       searchValue ? `/api/ads?${searchValue}` : '/api/ads'
     );
     return data.results;

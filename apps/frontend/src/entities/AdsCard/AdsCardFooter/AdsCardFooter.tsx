@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Ads } from '../../../shared/types/types';
 import style from './adsCardFooter.module.scss';
-import LikeButton from '../../../features/AdsCard/LikeButton/LikeButton';
 
 interface AdsCardFooterProps {
   adsData: Ads;

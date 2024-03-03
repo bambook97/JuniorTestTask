@@ -4,10 +4,10 @@ import Carousel from '../../shared/ui/Carousel/Carousel';
 import LikeButton from '../../features/AdsCard/LikeButton/LikeButton';
 import style from './adView.module.scss';
 
-interface AdViewProps {
+interface AdDetailsProps {
   data: Ads;
 }
-const AdView = ({ data }: AdViewProps) => (
+const AdDetails = ({ data }: AdDetailsProps) => (
   <div className={style.wrapper}>
     <Carousel images={data.images} />
     <div className={style.textBlock}>
@@ -26,4 +26,4 @@ const AdView = ({ data }: AdViewProps) => (
   </div>
 );
 
-export default AdView;
+export default AdDetails;

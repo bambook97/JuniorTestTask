@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import AdViewSkeleton from '../../../widgets/AdView/skeleton/AdViewSkeleton';
+import AdDetailsSkeleton from '../../../widgets/AdView/skeleton/AdDetailsSkeleton';
 import useFetchAdData from '../../../shared/hooks/useFetchAdData';
-import AdView from '../../../widgets/AdView/AdView';
+import AdDetails from '../../../widgets/AdView/AdDetails';
 
 export default function AdPage({ params }: { params: { id: string } }) {
   // Работал в основном с PageRouter и получал данные через getServerSideProps, почитал в доке как фетчить данные в SSR с AppRouer,
@@ -11,7 +11,7 @@ export default function AdPage({ params }: { params: { id: string } }) {
 
   const { data } = useFetchAdData({ id: params.id });
 
-  if (!data) return <AdViewSkeleton />;
+  if (!data) return <AdDetailsSkeleton />;
 
-  return <AdView data={data} />;
+  return <AdDetails data={data} />;
 }

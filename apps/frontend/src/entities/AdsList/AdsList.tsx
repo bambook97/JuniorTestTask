@@ -3,7 +3,7 @@ import { Ads } from '../../shared/types/types';
 import style from './AdsCardsList.module.scss';
 
 interface AdsCardsListProps {
-  adsData?: Ads[];
+  adsData: Ads[];
   renderAds: (ads: Ads) => ReactNode;
 }
 

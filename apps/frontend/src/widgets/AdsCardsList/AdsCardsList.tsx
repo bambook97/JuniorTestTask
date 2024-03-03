@@ -23,6 +23,7 @@ const AdsCardsList = ({ isEnabled }: AdsCardsListProps) => {
   const handleApplyFilters = (filters: string) => {
     setFiltersParams(filters);
   };
+  if (!data) return null;
 
   return (
     <div>

@@ -2,7 +2,7 @@ import { Skeleton } from '@mui/material';
 import React from 'react';
 import style from './adViewSkeleton.module.scss';
 
-const AdViewSkeleton = () => (
+const AdDetailsSkeleton = () => (
   <div className={style.wrapper}>
     <Skeleton width="35vw" height="30vh" />
     <div style={{ width: '100%' }}>
@@ -19,4 +19,4 @@ const AdViewSkeleton = () => (
   </div>
 );
 
-export default AdViewSkeleton;
+export default AdDetailsSkeleton;
