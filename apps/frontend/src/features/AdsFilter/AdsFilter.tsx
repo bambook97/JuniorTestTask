@@ -20,7 +20,7 @@ const FiltersDialog = ({ open, onClose, onApplyFilters }: Props) => {
     maxPrice: '',
     city: '',
     district: '',
-    contains: '',
+    search: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,7 +46,7 @@ const FiltersDialog = ({ open, onClose, onApplyFilters }: Props) => {
       maxPrice: '',
       city: '',
       district: '',
-      contains: '',
+      search: '',
     });
     onApplyFilters('');
     onClose();
@@ -81,9 +81,9 @@ const FiltersDialog = ({ open, onClose, onApplyFilters }: Props) => {
           onChange={handleChange}
         />
         <Input
-          name="contains"
+          name="search"
           placeholder="Contains"
-          value={filters.contains}
+          value={filters.search}
           onChange={handleChange}
         />
       </DialogContent>
