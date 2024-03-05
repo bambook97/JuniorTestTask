@@ -3,5 +3,5 @@ export type Filters = {
   maxPrice: string;
   city: string;
   district: string;
-  contains: string;
+  search: string;
 };
